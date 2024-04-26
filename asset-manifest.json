@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bingo-game/static/css/main.e7d6895e.css",
-    "main.js": "/bingo-game/static/js/main.d139de55.js",
-    "static/js/453.2e1afb5c.chunk.js": "/bingo-game/static/js/453.2e1afb5c.chunk.js",
-    "index.html": "/bingo-game/index.html",
-    "main.e7d6895e.css.map": "/bingo-game/static/css/main.e7d6895e.css.map",
-    "main.d139de55.js.map": "/bingo-game/static/js/main.d139de55.js.map",
-    "453.2e1afb5c.chunk.js.map": "/bingo-game/static/js/453.2e1afb5c.chunk.js.map"
+    "main.css": "/lauriston-bingo/static/css/main.e7d6895e.css",
+    "main.js": "/lauriston-bingo/static/js/main.ca5df1c3.js",
+    "static/js/453.2e1afb5c.chunk.js": "/lauriston-bingo/static/js/453.2e1afb5c.chunk.js",
+    "index.html": "/lauriston-bingo/index.html",
+    "main.e7d6895e.css.map": "/lauriston-bingo/static/css/main.e7d6895e.css.map",
+    "main.ca5df1c3.js.map": "/lauriston-bingo/static/js/main.ca5df1c3.js.map",
+    "453.2e1afb5c.chunk.js.map": "/lauriston-bingo/static/js/453.2e1afb5c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7d6895e.css",
-    "static/js/main.d139de55.js"
+    "static/js/main.ca5df1c3.js"
   ]
 }
