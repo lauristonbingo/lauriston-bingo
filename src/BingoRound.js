@@ -12,12 +12,17 @@ function BingoRound({ index, color, numbers, setRounds, rounds, removeRound }) {
     }
   };
 
+  const removeNumber = (numIndex) => {
+    const newRounds = [...rounds];
+    newRounds[index].numbers.splice(numIndex, 1);
+    setRounds(newRounds);
+  };
+
   return (
     <div className="round" style={{ backgroundColor: color }}>
       <button className="close-btn" onClick={removeRound}>×</button>
-      <strong>Round: {color}</strong>
       <div className="numbers">
-        {numbers.map((num, idx) => <div key={idx}>{num}</div>)}
+        {numbers.map((num, idx) => <div key={idx} onClick={() => removeNumber(idx)}>{num}</div>)}
       </div>
       <input
         type="number"
@@ -27,7 +32,6 @@ function BingoRound({ index, color, numbers, setRounds, rounds, removeRound }) {
           if (e.key === 'Enter') addNumber();
         }}
       />
-      <button onClick={addNumber}>Add Number</button>
     </div>
   );
 }
