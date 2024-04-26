@@ -52,6 +52,7 @@ function App() {
         />
         <button onClick={startRound} disabled={isGameActive}>Start Round</button>
         <button onClick={stopGame} disabled={!isGameActive}>Stop Game</button>
+        <div class="lucky-dragon">LUCKY DRAGON</div>
       </div>
       {rounds.map((round, index) => (
         <BingoRound

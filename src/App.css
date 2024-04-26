@@ -111,11 +111,11 @@ strong {
 }
 body {
     /* ... existing styles ... */
-    background-image: url('dragon.png'), url('dragon1.png');
+    background-image: url('dragon1.png'), url('dragon.png');
     background-position: left bottom, right bottom;
     background-repeat: no-repeat, no-repeat;
     background-attachment: fixed; /* Keep the dragons in place while scrolling */
-    background-size: 30%, 30%; /* Adjust size to your preference */
+    background-size: 40%, 40%; /* Adjust size to your preference */
 }
 input[type="color"] {
     height: 40px; /* Match the height of buttons */
@@ -138,4 +138,25 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
     border: none;
     border-radius: 5px;
-}
+}.lucky-dragon {
+    background-color: #F53D3D; /* dark red */
+    color: #000000; /* gold */
+    font-family: 'Impact', Arial, Helvetica, sans-serif; /* or another wide, bold font */
+    font-size: 48px; /* or the size you prefer */
+    padding: 10px;
+    border: 3px solid #ffd700; /* gold border */
+    
+    text-shadow: 
+      1px 1px 0 #FFD700, /* Adding multiple shadows for a glow effect */
+      2px 2px 0 #FFD700,
+      3px 3px 0 #000;
+    
+    /* Optional: add a slight 3D effect or embossing */
+    text-transform: uppercase; /* Uppercase lettering */
+    font-weight: bold; /* Bold font */
+    text-align: center; /* Center the text */
+    
+    display: inline-block; /* Only as wide as it needs to be */
+    margin: 0 auto; /* Center the element in its container */
+    box-shadow: 0 0 10px #FFD700; /* Soft outer glow effect */
+  }
