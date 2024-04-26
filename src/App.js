@@ -4,8 +4,8 @@ import './App.css';
 
 function App() {
   const [rounds, setRounds] = useState(() => JSON.parse(sessionStorage.getItem('bingoRounds')) || []);
-  const [color, setColor] = useState('');
   const [isGameActive, setIsGameActive] = useState(false);
+  const [color, setColor] = useState('#ff0000');
 
   useEffect(() => {
     // Load rounds from session storage on initial load
@@ -18,9 +18,10 @@ function App() {
     sessionStorage.setItem('bingoRounds', JSON.stringify(rounds));
   }, [rounds]);
 
+  
   const startRound = () => {
     if (color) {
-      setRounds([...rounds, { color, numbers: [] }]);
+      setRounds([{ color, numbers: [] }, ...rounds]);
       setColor('');
       setIsGameActive(true);
     } else {
@@ -39,19 +40,19 @@ function App() {
   };
 
   return (
-    <div className="game-container">
-      <input 
-        type="text"
-        value={color}
-        onChange={e => setColor(e.target.value)}
-        onKeyPress={e => {
-          if (e.key === 'Enter' && !isGameActive) startRound();
-        }}
-        placeholder="Enter color for the round"
-        disabled={isGameActive}
-      />
-      <button onClick={startRound} disabled={isGameActive}>Start Round</button>
-      <button onClick={stopGame} disabled={!isGameActive}>Stop Game</button>
+    <div className="app-container">
+      <div className="controls-container">
+        <label htmlFor="colorPicker" className="color-label">Select Color:</label>
+        <input 
+          id="colorPicker"
+          type="color"
+          value={color}
+          onChange={e => setColor(e.target.value)}
+          disabled={isGameActive}
+        />
+        <button onClick={startRound} disabled={isGameActive}>Start Round</button>
+        <button onClick={stopGame} disabled={!isGameActive}>Stop Game</button>
+      </div>
       {rounds.map((round, index) => (
         <BingoRound
           key={index}

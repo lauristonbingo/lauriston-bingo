@@ -1,53 +1,141 @@
-.game-container {
+/* src/App.css */
+.app-container {
+    text-align: center; /* Centralize the child content */
+    max-width: 1200px; /* Or your preferred max width */
+    margin: auto; /* This will auto-center the container */
+    padding: 0 50px; /* Add some padding on the sides */
+  }
+  .controls-container {
+    display: flex;
+    align-items: center; /* This will vertically center align the children */
+    justify-content: start; /* Aligns children to the start of the container */
+    gap: 10px; /* Provides space between elements */
+}
+  
+  .game-container {
+    display: inline-block; /* Makes the container as wide as its content */
     padding: 20px;
     background: white;
-    text-align: center;
-    width: 80%;
-    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative; /* For absolute positioning of child elements */
+    margin-top: 30px; /* Add some top margin */
+  }
+  
+input[type="text"], input[type="number"] {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 40px; /* Match the height of input[type="color"] */
+    line-height: 40px; /* Ensures text inside the button is centered */
+    padding: 0 20px; /* Adjust horizontal padding as needed */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
 }
 
 .round {
-    margin-top: 20px;
-    padding: 10px;
     position: relative;
+    background-color: #f8f9fa;
+    margin-top: 20px;
+    padding:  30px 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .close-btn {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 0;
+    right: 0;
     border: none;
     background-color: transparent;
-    color: #ff0000;
-    font-size: 20px;
+    color: #dc3545;
+    font-size: 24px;
     cursor: pointer;
+    padding: 5px;
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .numbers div {
-    display: inline-block;
-    margin-right: 5px;
-    padding: 2px 5px;
-    background-color: #efefef;
-    border-radius: 5px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%; /* Circular shapes for numbers */
+    font-weight: bold;
     cursor: pointer;
 }
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('dragon1.png');
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 40%;
-    transform: scaleX(-1); /* This will flip the image */
-    z-index: -1; /* This will put the image behind the content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.round, .numbers div {
+    animation: fadeIn 0.5s ease-out;
+}
+
+strong {
+    color: #007bff; /* Theme color for round title */
+    font-size: 1.2rem;
 }
 body {
+    /* ... existing styles ... */
     background-image: url('dragon.png'), url('dragon1.png');
+    background-position: left bottom, right bottom;
     background-repeat: no-repeat, no-repeat;
-    background-position: right top, left top;
-    background-size: 40%, 40%;
+    background-attachment: fixed; /* Keep the dragons in place while scrolling */
+    background-size: 30%, 30%; /* Adjust size to your preference */
+}
+input[type="color"] {
+    height: 40px; /* Match the height of buttons */
+    border: 1px solid #ccc; /* Optional: for consistent styling with other elements */
+    padding: 0;
+    line-height: 40px; /* Set line-height to input height for vertical centering */
+    cursor: pointer;
+    -webkit-appearance: none; /* Removes default styling on WebKit browsers */
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+.color-label {
+    margin: 0;
+    font-size: 16px;
+    line-height: 40px; /* Adjust line height to match the height of input elements */
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 5px;
 }
