@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/lauriston-bingo/static/css/main.47fdc0e9.css",
-    "main.js": "/lauriston-bingo/static/js/main.48f3bdb2.js",
+    "main.css": "/lauriston-bingo/static/css/main.479db517.css",
+    "main.js": "/lauriston-bingo/static/js/main.4c62ac3a.js",
     "static/js/453.2e1afb5c.chunk.js": "/lauriston-bingo/static/js/453.2e1afb5c.chunk.js",
     "static/media/dragon1.png": "/lauriston-bingo/static/media/dragon1.584d19e39af78a6bc83e.png",
     "static/media/dragon.png": "/lauriston-bingo/static/media/dragon.86878ab0414b977637c8.png",
     "index.html": "/lauriston-bingo/index.html",
-    "main.47fdc0e9.css.map": "/lauriston-bingo/static/css/main.47fdc0e9.css.map",
-    "main.48f3bdb2.js.map": "/lauriston-bingo/static/js/main.48f3bdb2.js.map",
+    "main.479db517.css.map": "/lauriston-bingo/static/css/main.479db517.css.map",
+    "main.4c62ac3a.js.map": "/lauriston-bingo/static/js/main.4c62ac3a.js.map",
     "453.2e1afb5c.chunk.js.map": "/lauriston-bingo/static/js/453.2e1afb5c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.47fdc0e9.css",
-    "static/js/main.48f3bdb2.js"
+    "static/css/main.479db517.css",
+    "static/js/main.4c62ac3a.js"
   ]
 }
